@@ -1,0 +1,82 @@
+body {
+  
+font-family: arial;
+
+}
+
+td {
+  vertical-align: top;
+  padding: 15px;
+}
+
+button {
+
+
+}
+
+table {
+
+  background: url('/assets/img/palms.png');
+  background-size: cover;
+}
+
+li {
+  background: yellow;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px 15px 18px 15px;
+  font-size: 20px;
+  width: 80%;
+  height:100px;
+  list-style: none;
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
+}
+
+
+
+.label {
+  font-weight: bold;
+  font-family: arial;
+
+}
+
+.create-update-form {
+  background: #ddd;
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.btn {
+
+	background: #ddd;
+  width:100px;
+  height: 40px;
+	color: #000;
+
+
+}
+
+.btn-sm {
+  
+  background: #ddd;
+  width:100px;
+  height: 30px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+#ca {
+
+  width: 40%;
+  height: 20px;
+}

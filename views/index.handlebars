@@ -1,0 +1,95 @@
+
+<table width="100%" border="0" >
+<tr >
+<td colspan="3">
+<center><h1 style="color:red;font-size:40px;">Eat-Da-Burger!</h1></center>
+</td>
+</tr>
+<tr>
+<td >
+
+<center><h2 style="padding:10px">Burgers that you can eat!</h2></center>
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <li>Burger Number:&nbsp;{{this.id}} ----
+        {{this.burger_name}}
+
+        
+         <form action="/{{this.id}}" method="POST">
+     
+          <input type="hidden" name="devoured" value="true">
+
+          <button type="submit" class="btn-sm">Devour!</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+</td>
+<td>
+
+<center><img src="/assets/img/Hamburger.png" width="400"></center>
+
+</td>
+<td>
+
+<center><h2 style="padding:10px">Burgers that you have devoured!</h2></center>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <li>Burger Number:&nbsp;{{this.id}} ----
+        {{this.burger_name}}
+
+          <form action="/{{this.id}}" method="POST">
+     
+          <input type="hidden" name="devoured" value="false">
+
+          <button type="submit" class="btn-sm">Eat Again!</button>
+        </form>
+
+        <form action="/delete/{{this.id}}" method="POST" style="display:inline;">
+     
+    
+
+          <button type="submit" class="btn-sm">Delete!</button>
+        </form>
+
+        
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+</td>
+</tr>
+
+<tr >
+<td colspan="3">
+
+<h2>Add a Sandwich</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca" style="font-size:20px;">Sandwich Name:</label>
+    <input type="text" id="ca" name="burger_name" width="100">
+  </div>
+
+  <div class="form-group">
+    
+    <input type="hidden" name="devoured" value="0">
+
+    
+  </div>
+  <br>
+
+  <button type="submit" class="btn" style="margin-left:20px;">Add Sandwich</button>
+  <br><br>
+</form>
+
+</td>
+</tr>
+</table>
